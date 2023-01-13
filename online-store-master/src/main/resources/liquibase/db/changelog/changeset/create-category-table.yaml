@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-category-table
+      author: JavaAbuser
+      changes:
+        - createTable:
+            tableName: category
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(20)

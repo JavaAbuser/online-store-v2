@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-table
+      author: JavaAbuser
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(20)
+              - column:
+                  name: price
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(100)
+              - column:
+                  name: category_id
+                  type: INT
+                  constraints:
+                    nullable: false
